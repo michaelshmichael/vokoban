@@ -1,0 +1,20 @@
+<%- include("./partials/header") %>
+<div id="newFormForm" class="ui main text container">
+	<div class="ui huge header">
+		Sign Up
+	</div>
+
+<form action="/register" method="post" class="ui form" autocomplete="off">
+	<div class="field">
+		<label>Enter a username</label>
+		<input type="text" name="username" placeholder="Username">
+	</div>
+	<div class="field">
+		<label>And a strong password</label>
+		<input type="password" name="password" placeholder="Password">
+	</div>
+	<button class="ui teal button">
+		Sign up
+	</button>
+</form>
+<%- include("./partials/footer") %>

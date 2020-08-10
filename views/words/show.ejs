@@ -1,0 +1,46 @@
+<%- include("../partials/header")%>
+
+<div id="showContainer" class="ui grid container">
+	<div class="ui two column divided grid">
+		<div class="row">
+			<div class="four wide column">
+				<div class="forms">
+					<div class="ui huge header">Other Word Forms</div>
+					<% word.forms.forEach(function(form){%>
+						<p><strong><%= form.pos%></strong> - <%= form.text%></p>
+							<a class="mini ui button" href="/words/<%=word._id%>/forms/<%= 				form._id%>/edit">Edit</a>
+						<form id="deleteForm" action="/words/<%=word._id%>/forms/<%=form._id%>?_method=DELETE" method="POST">
+							<button class="mini ui button">Delete</button>
+						</form>
+					<% }) %>
+				</div>
+				<hr>
+				<a class="ui inverted green button" href="/words/<%= word._id%>/forms/new">Add</a>
+			</div>
+			<div class="twelve wide column">
+				<div class="ui huge header"><%= word.russian%> - <%=word.english%></div>
+					<p><strong>Example Sentence: </strong><%=word.example%></p>
+					<p><strong>Tags: </strong><%=word.tag%></p>
+						<div class="ui top attached segment">
+							<div class="item">
+								<div class="ui rounded image">
+									<img id="showImage" src="<%= word.image %>">
+								</div>
+							<form action="/words/<%= word._id%>?_method=DELETE" method="POST">
+								<div id="mainShowButtons">
+									<button class="ui inverted red button">Delete</button>
+									<!-- SHOULD THIS EDIT BUTTON BE INSIDE THIS DELETE FORM? -->
+									<a class="ui inverted blue button" href="/words/<%= word._id%>/edit">Edit</a>
+								</div>
+								
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+	</div>
+	
+</div>
+
+<%- include("../partials/footer")%>

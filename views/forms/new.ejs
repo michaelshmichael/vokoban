@@ -1,0 +1,22 @@
+<%- include("../partials/header") %>
+<div id="newFormForm" class="ui main text container">
+	<div class="ui huge header">
+		Add New Word Form for <%= word.russian %>
+	</div>
+	<form action="/words/<%= word._id%>/forms" method="POST" class="ui form" autocomplete="off">
+	<div class="field">
+		<label>Part Of Speech</label>
+		<input type="text" name="form[pos]" placeholder="Enter the Part of Speech">
+	</div>
+	<div class="field">
+		<label>Text</label>
+		<input type="text" name="form[text]" placeholder="Enter the text">
+	</div>
+	
+	<button class="ui inverted green button">Submit</button>
+</form>
+
+<a href="/words">Back to the collection</a>
+</div>
+
+<%- include("../partials/footer") %>

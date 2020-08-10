@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>VokoBan</title>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+	</head>
+	<body>
+	<div class="ui fixed inverted menu">
+		<div class="ui container">
+			<div class="header item"><i class="book icon"></i>
+				   VokoBan
+			</div>
+			<% if(!currentUser) { %>
+			<a href="/" class="item">Home</a>
+			<% } else { %>
+			<a href="/words" class="item">Collection</a>
+			<% } %>
+			<a href="/words/new" class="item">Add Card</a>
+			<div class="right menu">
+				<% if(!currentUser){ %>
+				<a href="/register" class="item">Sign Up</a>
+				<a href="/login" class="item">Login</a>
+				<% } else {%>
+				<a class="olive item"><strong><%= currentUser.username%></strong></a>
+				<a href="/logout" class="item">Logout</a>
+				<% } %>
+			</div>
+			
+		</div>
+	<br>
+	</div>
+	
+	<div id="flashAlert" class="ui main text container">
+		<% if(success && success.length > 0){ %>
+			<div class="ui success message">
+				 <div class="header">
+					<%= success %>
+				</div>
+			</div>
+		<% } %>
+		<% if(error && error.length > 0) { %>
+			<div class="ui negative message">
+				 <div class="header">
+					<%= error %>
+				</div>
+			</div>
+		<% } %>
+	</div>
+	
+	
+

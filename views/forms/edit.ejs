@@ -1,0 +1,22 @@
+<%- include("../partials/header") %>
+<div id="newFormForm" class="ui main text container">
+	<div class="ui huge header">
+		Edit Word Form
+	</div>
+	<form action="/words/<%= word_id%>/forms/<%= form._id%>?_method=PUT" method="POST" class="ui form" 	autocomplete="off">
+	<div class="field">
+		<label>Part Of Speech</label>
+		<input type="text" name="form[pos]" value="<%= form.pos%>">
+	</div>
+	<div class="field">
+		<label>Text</label>
+		<input type="text" name="form[text]" value="<%= form.text%>">
+	</div>
+	
+	<button class="ui inverted green button">Submit</button>
+</form>
+
+<a href="/words">Back to the collection</a>
+</div>
+
+<%- include("../partials/footer") %>

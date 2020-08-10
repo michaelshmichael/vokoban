@@ -1,0 +1,33 @@
+<%- include("../partials/header") %>
+<div id="newWordForm" class="ui main text container">
+	<div class="ui huge header">
+		New Word
+	</div>
+	<form action="/words" method="POST" class="ui form" autocomplete="off">
+	<div class="field">
+		<label>English</label>
+		<input type="text" name="word[english]" placeholder="Enter in English here">
+	</div>
+	<div class="field">
+		<label>Russian</label>
+		<input type="text" name="word[russian]" placeholder="Enter in Russian here">
+	</div>
+	<div class="field">
+		<label>Example</label>
+		<input type="text" name="word[example]" placeholder="An example sentence">
+	</div>
+	<div class="field">
+		<label>Image URL (Optional)</label>
+		<input type="text" name="word[image]" placeholder="Enter image URL if you wish">
+	</div>
+		<div class="field">
+		<label>Tag</label>
+		<input type="text" name="word[tag]" placeholder="Enter a tag here">
+	</div>
+	<button class="ui inverted green button">Submit</button>
+</form>
+
+<a href="/words">Back to the collection</a>
+</div>
+
+<%- include("../partials/footer") %>

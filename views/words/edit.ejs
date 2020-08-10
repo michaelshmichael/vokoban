@@ -1,0 +1,33 @@
+<%- include("../partials/header") %>
+<div id="editWord" class="ui main text container">
+	<div class="ui huge header">
+		Edit "<%= word.russian %>"
+	</div>
+<form action="/words/<%= word._id%>?_method=PUT" method="POST" class="ui form" autocomplete="off">
+	<div class="field">
+		<label>English</label>
+		<input type="text" name="word[english]" value="<%=word.english%>">
+	</div>
+	<div class="field">
+		<label>Russian</label>
+		<input type="text" name="word[russian]" value="<%=word.russian%>">
+	</div>
+	<div class="field">
+		<label>Example</label>
+		<input type="text" name="word[example]" value="<%=word.example%>">
+	</div>
+	<div class="field">
+		<label>Image URL (Optional)</label>
+		<input type="text" name="word[image]" value="<%=word.image%>">
+	</div>
+	<div class="field">
+		<label>Tag</label>
+		<input type="text" name="word[tag]" value="<%=word.tag%>">
+	</div>
+	<button class="ui inverted green button">Submit</button>
+</form>
+
+<a href="/words">Back to the collection</a>
+</div>
+
+<%- include("../partials/footer") %>
