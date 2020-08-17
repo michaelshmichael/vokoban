@@ -1,34 +1,33 @@
 <%- include("../partials/header") %>
 
 <div class = "ui main text container">
-<h1>Welcome, <%= currentUser.username %>. Have a look through your cards, or add your first one! </h1>
+<h1>Welcome, <%= currentUser.username %>. Have a look through your cards, search for one, or add your first! </h1>
 		<form action="/words" method="GET" class="ui form">
 			<div id="searchBar" class="field">
-				<input type="text" name="search" placeholder="Fuzzy Word Search..." autocomplete="off">
+				<input type="text" name="search" placeholder="Search Your Cards..." autocomplete="off">
 				<button id="searchButton" class="ui icon button"><i class="search icon"></i></button>
 			</div>
 		</form>
 </div>
-	
 
 <% words.forEach(function(word){ %>
 	<% if(currentUser != undefined){ %>
 		<% if(currentUser.username === word.author.username){ %>
-		<div class ="wordUnit">
-			<div class="card">
-				<div class="front">
-					<h3><%= word.english %></h3>
-					<img src="<%= word.image %>">
-				</div>
-				<div class="back">
-					<h3><%= word.russian %></h3>
-					<img src="<%= word.image %>">
-					<div class="extra">
-						<a id="seeMoreButton" class="ui inverted green button" href="/words/<%=word._id%>">See 							more</a>
+			<div class ="wordUnit">
+				<div class="card">
+					<div class="front">
+						<h3><%= word.english %></h3>
+						<img src="<%= word.image %>">
+					</div>
+					<div class="back">
+						<h3><%= word.russian %></h3>
+						<img src="<%= word.image %>">
+						<div class="extra">
+							<a id="seeMoreButton" class="ui inverted green button" href="/words/<%=word._id%>">See 							more</a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 		<% } %>
 	<% } %>
 <% }) %>

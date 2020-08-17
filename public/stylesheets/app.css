@@ -1,7 +1,46 @@
+/*====================================================================================*/
+/*NAV BAR AND FLASH*/
+
+/*Nav Bar*/
 .ui {
    font-family: 'Josefin Sans', sans-serif !important;
 }
 
+/*NavLogo Icon*/
+#navLogoIcon {
+	font-size: 2em;
+}
+
+
+/*Flash Alert*/
+#flashAlert { 
+	position: relative;
+	margin-top: 70px;
+	margin-bottom: 10px;
+}
+
+
+/*Footer*/
+footer {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	height: 40px;
+	width: 100%;
+	background-color: black;
+	color: white;
+
+}
+
+
+/*=====================================================================================*/
+/*INDEX ROUTE*/
+
+body {
+	background: linear-gradient(to right, #d3cce3, #e9e4f0);
+}
+
+/*Welcome Message*/
 h1 {
 	font-family: 'Josefin Sans', sans-serif !important;
 	position: relative;
@@ -10,16 +49,7 @@ h1 {
 	text-align: center;
 }
 
-#flashAlert { 
-	position: relative;
-	margin-top: 70px;
-	margin-bottom: 10px;
-}
-
-#deleteForm{
-	display: inline-block;
-}
-
+/*Search Function*/
 #searchBar{
 	margin-left: 20vw;
 	width: 25%;
@@ -33,13 +63,11 @@ h1 {
 	margin-left: 1vw;
 }
 
-i.icon {
-	font-size: 2em;
-}
 
 
 
-.wordUnit {
+/*Cards*/
+.wordUnit, .tagUnit {
 	position: relative;
 	display: inline-block;
 	margin-left: 10vw;
@@ -50,6 +78,11 @@ i.icon {
 	width: 20vw;
 }
 
+h3 {
+	font-size: 1.5vw;
+	padding-top: 1vw;
+}
+
 .card {
 	position: absolute;
     width: 100%;
@@ -58,6 +91,11 @@ i.icon {
 	/*THIS GIVES THE ABILITY TO FLIP IN 3D SANDWICH EXAMPLE - FLIPPING BOTH PIECES OF BREAD OR JUST ONE*/
     transition: all 0.5s ease;
 	border: 1px solid black;
+}
+
+img {
+	max-width: 100%;
+	height: 60%;
 }
 
 .card:hover {
@@ -81,45 +119,66 @@ i.icon {
 	box-shadow: 4px 4px black;
 }
 
-h3 {
-	font-size: 1.5vw;
-	padding-top: 1vw;
+/*Div for 'See More' Button*/
+.extra{ 
+	margin: 5px; 
 }
 
+/*The Button Itself*/
 #seeMoreButton {
 	margin-top: 0.6vw;
 	font-size: 0.9vw;
 }
 
 
-img {
-	max-width: 100%;
-	height: 60%;
+/*=======================================================================================*/
+/*SHOW ROUTE*/
+
+/*Main Container*/
+#showContainer{
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
+/*Contains Word, Example, Image, and Buttons*/
+#wordInformationContainer{
+	background: linear-gradient(to right, #d3cce3, #e9e4f0);
+}
+
+/*Image*/
 #showImage {
 	max-width: 50%;
 	height: auto;
 }
 
+/*Delete and Edit Buttons*/
 #mainShowButtons {
 	margin-top: 3.0em;
 }
 
-#newFormForm, #newWordForm, #editWord {
+/*Delete Form Button*/
+#deleteFormButton{
+	display: inline-block;
+}
+
+
+
+/*=================================================================================*/
+/*FORM INPUT*/
+
+/*New Word, New/Edit Form, Edit Word*/
+#newWordForm, #editWordForm, #newFormForm {
 	position: relative;
 	margin-top: 10px;
 }
 
-.extra{ 
-	margin: 5px; 
+/*Login Form*/
+#loginForm {
+	position: relative;
+	margin-top: 170px;
 }
 
-#showContainer{
-	margin-top: 2em;
-}
 
-#showContainer {
-	margin-bottom: 2em;
-}
+
+
 

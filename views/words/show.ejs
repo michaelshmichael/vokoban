@@ -9,7 +9,7 @@
 					<% word.forms.forEach(function(form){%>
 						<p><strong><%= form.pos%></strong> - <%= form.text%></p>
 							<a class="mini ui button" href="/words/<%=word._id%>/forms/<%= 				form._id%>/edit">Edit</a>
-						<form id="deleteForm" action="/words/<%=word._id%>/forms/<%=form._id%>?_method=DELETE" method="POST">
+						<form id="deleteFormButton" action="/words/<%=word._id%>/forms/<%=form._id%>?_method=DELETE" method="POST">
 							<button class="mini ui button">Delete</button>
 						</form>
 					<% }) %>
@@ -21,7 +21,7 @@
 				<div class="ui huge header"><%= word.russian%> - <%=word.english%></div>
 					<p><strong>Example Sentence: </strong><%=word.example%></p>
 					<p><strong>Tags: </strong><%=word.tag%></p>
-						<div class="ui top attached segment">
+						<div id="wordInformationContainer" class="ui top attached segment">
 							<div class="item">
 								<div class="ui rounded image">
 									<img id="showImage" src="<%= word.image %>">
