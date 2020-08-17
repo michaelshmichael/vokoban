@@ -167,13 +167,13 @@ img {
 /*FORM INPUT*/
 
 /*New Word, New/Edit Form, Edit Word*/
-#newWordForm, #editWordForm, #newFormForm {
+#newWordForm, #editWordForm {
 	position: relative;
-	margin-top: 170px;
+	margin-top: 10px;
 }
 
 /*Login Form*/
-#loginForm {
+#loginForm, #newFormForm {
 	position: relative;
 	margin-top: 170px;
 }
