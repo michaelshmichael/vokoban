@@ -29,9 +29,18 @@ footer {
 	width: 100%;
 	background-color: black;
 	color: white;
-
 }
 
+#footerData {
+	margin-top: 10px;
+}
+
+/*Header and Footer on Smaller Screen*/
+@media (max-width: 767px) {
+	#footerData, .item{
+		font-size: 0.9em;
+	}
+}
 
 /*=====================================================================================*/
 /*INDEX ROUTE*/
@@ -51,7 +60,7 @@ h1 {
 
 /*Search Function*/
 #searchBar{
-	margin-left: 20vw;
+	margin-left: 37.5%;
 	width: 25%;
 	display: inline-block;
 }
@@ -64,8 +73,6 @@ h1 {
 }
 
 
-
-
 /*Cards*/
 .wordUnit, .tagUnit {
 	position: relative;
@@ -74,12 +81,22 @@ h1 {
 	margin-top: 3em;
 	margin-bottom: 1em;
 	text-align: center;
-	height: 20vw;
-	width: 20vw;
+	height: 250px;
+	width: 250px;
+}
+
+@media (max-width: 647px){
+	.wordUnit{
+		margin: 28%;
+		margin-bottom: 15px;
+		margin-top: 5px;
+	}
+	.wordUnit:nth-child(1){
+		margin-top: 5px;
+	}
 }
 
 h3 {
-	font-size: 1.5vw;
 	padding-top: 1vw;
 }
 
@@ -175,7 +192,13 @@ img {
 /*Login Form*/
 #loginForm, #newFormForm {
 	position: relative;
-	margin-top: 170px;
+	margin-top: 10vw;
+}
+
+@media (max-width: 767px) {
+	#newWordForm, #editWordForm, #loginForm, #newFormForm{
+		font-size: 0.9em;
+	}
 }
 
 

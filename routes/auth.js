@@ -3,13 +3,18 @@ const express = require("express"),
 	  passport= require("passport"),
 	  User    = require("../models/user")
 	  
-// LANDING
+// Landing
 router.get("/", function(req, res){
-	res.redirect("/landing");
+	res.render("landing");
 });
 
-router.get("/landing", function(req, res){
-	res.render("landing")
+// router.get("/landing", function(req, res){
+// 	res.render("landing")
+// })
+
+// Index About Page
+router.get("/about", function(req, res){
+	res.render("about")
 })
 
 //AUTH ROUTES
