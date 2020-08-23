@@ -10,26 +10,8 @@
 		</form>
 </div>
 
-<% tagComputers.forEach(function(word){ %>
-	<div class ="wordUnit">
-		<div class="card">
-			<div class="front">
-				<h3><%= word.english %></h3>
-						<img src="<%= word.image %>">
-					</div>
-					<div class="back">
-						<h3><%= word.russian %></h3>
-						<img src="<%= word.image %>">
-						<div class="extra">
-							<a id="seeMoreButton" class="ui inverted green button" href="/words/<%=word._id%>">See 							more</a>
-						</div>
-					</div>
-				</div>
-			</div>
-<%}) %>
-
 <!-- SHOWING ALL, THEN FILTERING FROM USER -->
-<!-- <% words.forEach(function(word){ %>
+<% words.forEach(function(word){ %>
 	<% if(currentUser != undefined){ %>
 		<% if(currentUser.username === word.author.username){ %>
 			<div class ="wordUnit">
@@ -49,6 +31,6 @@
 			</div>
 		<% } %>
 	<% } %>
-<% }) %> -->
+<% }) %>
 
 <%- include("../partials/footer") %>
