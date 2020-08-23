@@ -1,5 +1,6 @@
+require("dotenv").config();
 const MongoClient = require('mongodb').MongoClient,
-	  url = "mongodb+srv://michael:wenger49@cluster0.uxhya.mongodb.net/vokoban1?retryWrites=true&w=majority";
+	  url = "mongodb+srv://michael:"+process.env.MONGOPASSSWORD+"@cluster0.uxhya.mongodb.net/vokoban1?retryWrites=true&w=majority";
 
 const tagComputers = []
 
