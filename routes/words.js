@@ -1,7 +1,7 @@
 const express = require("express"),
       router  = express.Router(),
 	  Word    = require("../models/word");
-
+	
 // INDEX ROUTE
 router.get("/", function(req, res){
 	//This is the search bar funtionality - FUZZY SEARCH
@@ -11,7 +11,7 @@ router.get("/", function(req, res){
 			if(err){
 				console.log(err)
 			} else {
-				res.render("words/index", {words: words});
+				res.render("words/index", {words: words,});
 			}
 	});
 	} else {
