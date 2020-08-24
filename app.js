@@ -23,7 +23,7 @@ const wordRoutes = require("./routes/words"),
 
 const mongo = process.env.mongo;
 
-mongoose.connect("mongodb+srv://michael:wenger49@cluster0.uxhya.mongodb.net/vokoban1?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://michael:"mongo"@cluster0.uxhya.mongodb.net/vokoban1?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true
