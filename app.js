@@ -8,7 +8,7 @@ const express 			= require("express"),
 	  Word				= require("./models/word.js"),
 	  Form              = require("./models/form.js"),
 	  User              = require("./models/user.js"),
-	  dotENV            = require("dotenv").config();
+	  dotEnv            = require("dotenv").config();
 	 
 //const MongoClient 		= require('mongodb').MongoClient;
 
@@ -21,9 +21,9 @@ const wordRoutes = require("./routes/words"),
 	  formRoutes = require("./routes/forms"),
 	  authRoutes = require("./routes/auth");
 
-const mongoPassword = process.env.MONGOPASSWORD;
+const mongo = process.env.mongo;
 
-mongoose.connect("mongodb+srv://michael:"+mongoPassword+"@cluster0.uxhya.mongodb.net/vokoban1?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://michael:"+mongo+"@cluster0.uxhya.mongodb.net/vokoban1?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true
